@@ -18,13 +18,12 @@ function BreedShow({ breed, onClose }) {
       try {
         const response = await axios.get('https://api.unsplash.com/search/photos', {
           headers: {
-            // IMPORTANT: Replace this with your own Unsplash Access Key
             Authorization: 'Client-ID 1d8IQlysKErskIa4e4yLL97abGPXjGLiVHz998_yRgU'
           },
           params: {
             query: `${breed.name} dog`,
             orientation: 'landscape',
-            per_page: 1, // We only need the first result
+            per_page: 1, 
           }
         });
 
